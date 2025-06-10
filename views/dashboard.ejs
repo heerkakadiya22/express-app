@@ -17,7 +17,8 @@
         <div class="container mt-3">
             <h2>Welcome to the Dashboard </h2>
             <h4>hello, welcome <%= name %></h4>
-            <form action="/logout" method="GET">
+            <form action="/logout" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                 <button class="btn btn-outline-primary"
                     type="submit">Logout</button>
             </form>

@@ -156,7 +156,7 @@ app.post(
 
 //logout route
 
-app.get("/logout", protect, (req, res) => {
+app.post("/logout", protect, (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       return res.status(500).send("Error logging out");
