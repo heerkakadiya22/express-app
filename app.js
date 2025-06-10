@@ -5,7 +5,6 @@ const session = require("express-session");
 var FileStore = require("session-file-store")(session);
 const authroutes = require("./src/routes/authroutes");
 const dashboardroutes = require("./src/routes/dashboardroutes");
-const csrf = require("csurf");
 const { preventback } = require("./src/middlewares/middleware");
 
 const { PORT, HOST } = CONFIG;
