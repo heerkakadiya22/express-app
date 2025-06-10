@@ -4,7 +4,7 @@ node_modules/
 # Environment file
 .env
 
-# Session or temp files
+# Session files
 sessions/
 
 # Logs
