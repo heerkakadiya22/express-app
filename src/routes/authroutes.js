@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const authController = require("../controllers/authcontroller");
+const authController = require("../controllers/authController");
 const {
   reValidation,
   loginValidation,
-} = require("../validators/authvalidation");
+} = require("../validators/authValidation");
 const { validationResult } = require("express-validator");
 const { preventbackprotect, protect } = require("../middlewares/middleware");
 const csrf = require("csurf");

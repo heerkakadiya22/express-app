@@ -1,10 +1,9 @@
 const express = require("express");
-const db = require("./src/config/db");
 const CONFIG = require("./src/config/config");
 const session = require("express-session");
 var FileStore = require("session-file-store")(session);
-const authroutes = require("./src/routes/authroutes");
-const dashboardroutes = require("./src/routes/dashboardroutes");
+const authRoutes = require("./src/routes/authRoutes");
+const dashboardRoutes = require("./src/routes/dashboardRoutes");
 const { preventback } = require("./src/middlewares/middleware");
 
 const { PORT, HOST } = CONFIG;
@@ -36,8 +35,8 @@ app.use(preventback);
 
 app.use(express.static("public"));
 
-app.use(authroutes);
-app.use(dashboardroutes);
+app.use(authRoutes);
+app.use(dashboardRoutes);
 
 //server start
 app.listen(PORT, () => {
